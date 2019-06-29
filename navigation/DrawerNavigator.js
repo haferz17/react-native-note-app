@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 import {createDrawerNavigator, createAppContainer } from 'react-navigation';
 import HomeScreen from '../screen/HomeScreen';
 import AddNote from '../screen/AddNote';
