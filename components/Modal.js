@@ -1,14 +1,19 @@
 import React, {Component} from 'react';
 import {Modal, Text, TouchableOpacity, View, StyleSheet, Button} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { sorting } from '../public/action/notes';
+import { connect } from 'react-redux';
 
-export default class ModalExample extends Component {
+class ModalSort extends Component {
   state = {
     modalVisible: false,
   };
-
   setModalVisible(visible) {
     this.setState({modalVisible: visible});
+  }
+  sortingData = (value) =>{
+    this.props.dispatch(sorting(value))
+    this.props.popUpHandler
   }
   render() {
     return (
@@ -18,11 +23,11 @@ export default class ModalExample extends Component {
           transparent={true}
           visible={this.state.modalVisible}>
             <View style={styles.modal}>
-              <TouchableOpacity style={{flexDirection:'row',padding:5}}>
+              <TouchableOpacity style={{flexDirection:'row',padding:5}} onPress={()=>this.sortingData('ASC')}>
                 <Icon style={{fontSize:17}} name='arrow-up'/>
                 <Text>Ascending</Text>  
               </TouchableOpacity>
-              <TouchableOpacity style={{flexDirection:'row',padding:5}}>
+              <TouchableOpacity style={{flexDirection:'row',padding:5}} onPress={()=>this.sortingData('DESC')}>
                 <Icon style={{fontSize:17}} name='arrow-down'/>
                 <Text>Descending</Text>
               </TouchableOpacity>
@@ -38,6 +43,12 @@ export default class ModalExample extends Component {
     );
   }
 }
+const mapStateToProps = (state) =>{
+  return{
+      notes: state.notes
+  }
+}
+export default connect(mapStateToProps)(ModalSort)
 const styles = StyleSheet.create({
     modal: {
         backgroundColor:'#fff', 
