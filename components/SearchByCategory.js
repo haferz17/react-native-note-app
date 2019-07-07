@@ -4,6 +4,7 @@ import Header from './Header'
 //redux
 import {searchNoteByCategory} from '../public/action/notes'
 import {connect} from 'react-redux'
+import moment from 'moment'
 
 class SearchByCategory extends Component{
     constructor(props){
@@ -79,7 +80,7 @@ class SearchByCategory extends Component{
             <TouchableOpacity style={{width:'50%', padding:5}}>
                 <View style={[styles.itemContainer, { backgroundColor: color, elevation:10 }]}>
                     <View style={{position:'absolute',right:'5%', top:'5%'}}>
-                        <Text style={{fontSize:17, fontWeight:'300', color:'#fff'}}>{item.time}</Text>
+                        <Text style={{fontSize:17, fontWeight:'300', color:'#fff'}}>{moment(item.time).format("DD MMMM")}</Text>
                     </View>
                     <View style={{marginTop:15}}>
                         <Text style={{fontSize:20, fontWeight:'bold', color:'#fff'}}>{item.title}</Text>
