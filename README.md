@@ -24,6 +24,8 @@ React Native is a JavaScript framework for writing real, natively rendering mobi
 - Front End : `https://github.com/haferz17/react-native-note-app`
 - Back End : `https://github.com/haferz17/Simple-Restful-NoteApp`
 
+## Released APK
+If you want to try this app, you can download in this link : `https://drive.google.com/open?id=1CAgpXmpyQb7hGZNjdR-jQuZKR4FvUooB`
 ## Screenshot
 ____
 ### Home
