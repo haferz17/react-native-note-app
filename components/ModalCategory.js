@@ -45,7 +45,7 @@ class ModalCategory extends Component {
             <View style={{flex:1, alignItems: 'center',justifyContent: 'center'}}>
                 <View style={styles.modal}>
                     <TextInput underlineColorAndroid='#4CAF50' style={{width:'80%'}} placeholder='Category Name' onChangeText={(text) => this.setState({categoryName: text})}/>
-                    <TextInput underlineColorAndroid='#4CAF50' style={{marginBottom:20,width:'80%'}} placeholder='Image Url' onChangeText={(text) => this.setState({categoryIcon: text})}/>
+                    <TextInput underlineColorAndroid='#4CAF50' style={{marginBottom:20,width:'80%'}} placeholder='Icon Name' onChangeText={(text) => this.setState({categoryIcon: text})}/>
                     <TouchableOpacity style={{position:'absolute',right:'33%',bottom:'10%'}} onPress={()=>{this.addCategoryRoutes()}}>
                       <Text >Add</Text>
                     </TouchableOpacity>

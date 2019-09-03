@@ -1,5 +1,5 @@
 import axios from 'axios';
-let url = 'http://192.168.6.114:4000/categories'
+let url = 'http://notequ-api.herokuapp.com/categories'
 // export action that get notes
 export const getCategories = () => {
     return {

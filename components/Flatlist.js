@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { getNotes, searchNote, getTheNextPage } from '../public/action/notes';
 
 const numColumns = 2;
-class App extends Component {
+class Flatlist extends Component {
   constructor(props){
     super(props)
     this.state={
@@ -39,7 +39,6 @@ class App extends Component {
     })
   }
   _onRefresh = () =>{
-    this.setState({isNextPage:false})
     this.props.dispatch(getNotes())
     this.setDefaultNextPage()
   }
@@ -135,7 +134,7 @@ const mapStateToProps = state => {
 }
 
 // connect with redux,first param is map and second is component
-export default connect(mapStateToProps)(App)
+export default connect(mapStateToProps)(Flatlist)
  
 const styles = StyleSheet.create({
   container: {

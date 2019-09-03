@@ -1,5 +1,5 @@
 import axios from 'axios';
-const url = 'http://192.168.6.114:4000/notes/'
+const url = 'http://notequ-api.herokuapp.com/notes/'
 // export action that get notes
 export const getNotes = () => {
     return {
@@ -22,6 +22,7 @@ export const addNote = (notesData) => {
 }
 export const updateNote = (noteData) =>{
     if(noteData.id!==''){
+        console.log(noteData);
         return {
             type:'UPDATE_NOTE',
             data: axios.put(url+noteData.id,{

@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {View,Text, StyleSheet, FlatList, TouchableOpacity} from 'react-native'
 import Header from './Header'
 //redux
-import {searchNoteByCategory} from '../public/action/notes'
 import {connect} from 'react-redux'
 import moment from 'moment'
 
@@ -95,11 +94,11 @@ class SearchByCategory extends Component{
         let categorySelected = this.props.navigation.state.params.categoryName
         return(
             <View style={{flex:1}}>
-                <View style={{flex:1, alignItems:'center', justifyContent: 'center',}}>
+                <View style={{flex:1, alignItems:'center', justifyContent: 'flex-start'}}>
                     <View style={{flex:1, alignItems:'center', justifyContent:'center'}}>
-                    <Text style={{fontSize:20, fontWeight:'bold'}}>Category : {categorySelected}</Text>
+                        <Text style={{fontSize:20, fontWeight:'bold'}}>Category : {categorySelected}</Text>
                     </View>
-                    <View style={{flex:4}}>
+                    <View style={{flex:4,width:'100%'}}>
                         <FlatList
                             style={styles.gridView}
                             data={this.state.result}

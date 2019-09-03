@@ -43,7 +43,14 @@ class AddNote extends Component {
     // }
     addNotes = () => {
         const {title,note,categoryId} = this.state
-        this.props.dispatch(addNote({title,note,categoryId}))
+        if(!title.length||!note.length||!categoryId.length){
+            this.props.dispatch(addNote({title,note,categoryId}))
+            this.props.dispatch(getNotes())
+            this.props.navigation.goBack()
+        }
+        else {
+            alert('You must enter title, note and category');
+        }
     }
     getCategoryBtn = () =>{
         return this.props.categories.categories && this.props.categories.categories.map(item=>(

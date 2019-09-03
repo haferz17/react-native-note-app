@@ -39,8 +39,11 @@ class editNote extends Component {
         if(title!=='' && note!== ''){
             this.props.dispatch(updateNote({id,title,note,categoryId}))
             this.props.dispatch(getNotes())
+            this.props.navigation.goBack()
         }
-        this.props.navigation.goBack()
+        else {
+            alert('You must enter title, note and category');
+        }
     } 
     // dummyCategory = () => {
     //     let dummyCtgy = []

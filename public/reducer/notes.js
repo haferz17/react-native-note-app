@@ -8,6 +8,8 @@ const initialState = {
     searchByCategoryResult:[]
 }
 export default notes = (state = initialState, action) => {
+    console.log(state.notes)
+    console.log(action);
     switch(action.type){
         case 'GET_NOTES_PENDING':
             return {
@@ -38,7 +40,8 @@ export default notes = (state = initialState, action) => {
         case 'ADD_NOTE_FULFILLED':
             return {
                 ...state,
-                notes: [...state.notes, action.payload.data]
+                notes: [...state.notes, action.payload.data],
+                isLoading:false
             }
         /// UPDATE NOTE -----------------
         case 'UPDATE_NOTE_PENDING':
@@ -52,17 +55,9 @@ export default notes = (state = initialState, action) => {
                 isLoading:false
             }
         case 'UPDATE_NOTE_FULFILLED':
-            let {length} = notes
-            for(let i=0 ; i<length ; i++){
-                if(notes[i].id = action.payload.id){
-                    notes[i].categoryId = action.payload.categoryId
-                    notes[i].note = action.payload.note
-                    notes[i].title = action.payload.title
-                }
-            }
             return {
                 ...state,
-                notes:notes,
+                notes: [...state.notes, action.payload],
                 isLoading:false
             }
         case 'SEARCH_NOTE_PENDING':
