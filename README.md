@@ -1,6 +1,8 @@
-# React Native Note App
+<h1 align="center">Simple React Native Note App</h1>
 
-![](https://www.inovex.de/blog/wp-content/uploads/2018/03/react-native.png)
+<p align="center">
+  <img width="600" src="https://www.inovex.de/blog/wp-content/uploads/2018/03/react-native.png"/>
+</p>
 
 ## Introduction
 ____
@@ -21,14 +23,19 @@ React Native is a JavaScript framework for writing real, natively rendering mobi
 4. And the last, run `react-native run-android`
 
 ## Related Project
-- Front End : `https://github.com/haferz17/react-native-note-app`
-- Back End : `https://github.com/haferz17/Simple-Restful-NoteApp`
+- [Back End](https://github.com/haferz17/Simple-Restful-NoteApp)
 
+## Released APK
+If you want to try this app, you can download in this link : <br/>
+<a href="https://drive.google.com/open?id=1CAgpXmpyQb7hGZNjdR-jQuZKR4FvUooB">
+  <img src="https://thecorrespondent.in/wp-content/uploads/2019/02/GoogleDrive-big.png" width=100/>
+</a>
 ## Screenshot
 ____
 ### Home
-![](https://i.imgur.com/DnIYJsF.png)
+<img width="300" src="https://i.imgur.com/DnIYJsF.png"/>
 
 ### Drawer
-![](https://imgur.com/GDLi4QL.png)
+<img width="300" src="https://imgur.com/GDLi4QL.png"/>
+
 
